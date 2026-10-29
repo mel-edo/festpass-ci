@@ -1,7 +1,29 @@
-# FestPass: campus event registration + Jenkins
+# FestPass: Automated CI/CD Pipeline & Event Registration System
 
-This is a deliberately failing **diagnostic starter**, not a finished submission. It manages
-multiple events, seat limits, student registrations, cancellations, and local
+[![Pipeline Status](https://img.shields.io/badge/Jenkins_CI-SUCCESS-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Tests-28%20passed%2C%200%20failed-success.svg)]()
+[![Build Cause](https://img.shields.io/badge/Trigger-Started%20by%20SCM%20change-blue.svg)]()
+
+> **Submission Metadata**:
+> - **Student Alias**: `mel-edo` (from Git commit author)
+> - **Class Code**: `001`
+> - **Challenge Code**: `00264`
+> - **Final Executable**: [`evidence/festpass.jar`](evidence/festpass.jar)
+> - **Detailed Evidence Report**: [**`evidence/SUBMISSION_EVIDENCE.md`**](evidence/SUBMISSION_EVIDENCE.md)
+
+---
+
+## Submission Overview & Results
+
+| Build # | Git Commit | Build Trigger / Cause | Test Results | Pipeline Status | Published Artifacts |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Build 1** | `59f6854` | Manual (`Build Now`) | 25 pass, 3 fail | **FAILURE (RED)** | `submission-evidence.csv` |
+| **Build 2** | `db5733c` | **Started by an SCM change** | 25 pass, 3 fail | **FAILURE (RED)** | [`evidence/submission-evidence-red.csv`](evidence/submission-evidence-red.csv) |
+| **Build 3** | `8cde3a3` | **Started by an SCM change** | 28 pass, 0 fail | **SUCCESS (GREEN)** | [`evidence/festpass.jar`](evidence/festpass.jar), [`evidence/submission-evidence-green.csv`](evidence/submission-evidence-green.csv) |
+
+---
+
+## About FestPass
 file persistence. For the **one-hour Jenkins assessment**, create the SCM job,
 add the missing polling trigger, investigate test failures, and demonstrate
 an automatic red build followed by an automatic green build after your fix.
